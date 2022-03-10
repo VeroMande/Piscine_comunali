@@ -1,0 +1,335 @@
+
+
+------------------- PISCINA ----------------
+INSERT INTO Piscina VALUES ('acquaSplash', 'monza', 'De Gasperi', 20900, '2021-01-10', '2021-12-10');
+INSERT INTO Piscina VALUES ('SiloamClub', 'Rogoredo', 'Foscarari', 21950, '2021-01-01', '2021-12-15');
+INSERT INTO Piscina VALUES ('Tuffo Splash', 'Milano', 'Mincio', 20139, '2021-01-08', '2021-12-29');
+INSERT INTO Piscina VALUES ('Pace e mare', 'Buccinasco', 'della costituzione', 20090, '2021-01-11', '2021-12-31');
+INSERT INTO Piscina VALUES ('Sporting Club Desio', 'Desio', 'Villoresi', 20835, '2021-01-01', '2021-12-31');
+INSERT INTO Piscina VALUES ('Leone X', 'Monza', 'Monti E Tognetti', 20900, '2021-01-04', '2021-12-12');
+INSERT INTO Piscina VALUES ('Fun splash', 'Lesmo', 'Cristoforo Colombo', 23891, '2021-01-05', '2021-12-31');
+INSERT INTO Piscina VALUES ('Pratogrande', 'Casatenovo', 'Statale', 23852, '2021-01-01', '2021-12-12');
+INSERT INTO Piscina VALUES ('Wet Life', 'Nibionno', 'Gaggio', 23895, '2021-01-08', '2021-12-28');
+INSERT INTO Piscina VALUES ('Cielo Blu', 'Seregno', 'Olimpia', 24011, '2021-01-03', '2021-12-30');
+
+
+------------------- CORSO DI NUOTO ----------------
+INSERT INTO CorsoDiNuoto VALUES ('284a5', 'baby', 12 , 1, 15, 1, 1, 'SiloamClub');
+INSERT INTO CorsoDiNuoto VALUES ('254a3', 'neonatale', 11, 1, 13, 2, 2, 'Fun splash');
+INSERT INTO CorsoDiNuoto VALUES ('12bc5', 'ragazzi', 12 , 1, 12, 3, 3, 'Pratogrande');
+INSERT INTO CorsoDiNuoto VALUES ('22d67', 'baby', 7 , 1, 19, 2, 4, 'Pace e mare');
+INSERT INTO CorsoDiNuoto VALUES ('7b3a2', 'adulti', 6 , 1, 20, 1, 3, 'Sporting Club Desio');
+INSERT INTO CorsoDiNuoto VALUES ('234a5', 'baby', 23 , 1, 20, 2, 1, 'Leone X');
+INSERT INTO CorsoDiNuoto VALUES ('aer11', 'ragazzi', 13 , 1, 12, 3, 2, 'Wet Life');
+INSERT INTO CorsoDiNuoto VALUES ('196e8', 'baby', 20, 1, 10, 2, 1, 'Leone X');
+INSERT INTO CorsoDiNuoto VALUES ('2a5e3', 'adulti', 8, 1, 17, 2, 4, 'Tuffo Splash');
+INSERT INTO CorsoDiNuoto VALUES ('69ae5', 'adulti', 8, 1, 17, 2, 4, 'Cielo Blu');
+
+
+------------------- VASCA ----------------
+INSERT INTO Vasca VALUES ('aperto', 'acquaSplash', '2', '2021-01-10', '2021-12-10');
+INSERT INTO Vasca VALUES ('chiuso','SiloamClub', NULL, '2021-06-01', '2021-09-15');
+INSERT INTO Vasca VALUES ('olimpionica','Tuffo Splash', '3', '2021-01-08', '2021-12-29');
+INSERT INTO Vasca VALUES ('baby','Pace e mare', '1', '2021-01-11', '2021-05-31');
+INSERT INTO Vasca VALUES ('neonatale','Sporting Club Desio', NULL, '2021-09-01', '2021-05-31');
+INSERT INTO Vasca VALUES ('aperto','Leone X', '4', '2021-06-04', '2021-09-12');
+INSERT INTO Vasca VALUES ('chiuso','Fun splash', '1', '2021-09-05', '2021-05-31');
+INSERT INTO Vasca VALUES ('baby','Pratogrande', '3', '2021-06-01', '2021-09-12');
+INSERT INTO Vasca VALUES ('aperto','Wet Life', NULL, '2021-01-08', '2021-12-28');
+INSERT INTO Vasca VALUES ('olimpionica','Cielo Blu', '4', '2021-06-03', '2021-09-30');
+
+------------------- PERSONALE ----------------
+-- ISTRUTTORI --
+INSERT INTO Personale VALUES ('MRTSLA70T54E234I', 'Martina', 'Sala');
+INSERT INTO Personale VALUES ('MRCZLT65S34G234R', 'Marco', 'Ziliotti');
+INSERT INTO Personale VALUES ('RSSGRG61H14F133M', 'Giorgio', 'Rossi');
+INSERT INTO Personale VALUES ('MSSMRA58R18E507V', 'Mauro', 'Messina');
+INSERT INTO Personale VALUES ('LCNLSN80HO3C351G', 'Alessandro', 'Luciani');
+INSERT INTO Personale VALUES ('MZZMLN72A70G273C', 'Milena', 'Mazza');
+INSERT INTO Personale VALUES ('BVLCST78L20D612P', 'Cristian', 'Bevilacqua');
+INSERT INTO Personale VALUES ('BNDNRS79T60G273L', 'Annarosa', 'Biondi');
+INSERT INTO Personale VALUES ('GIOCDD78E03A662R', 'Gioia', 'Candido');
+INSERT INTO Personale VALUES ('CRPLCA90M42L736Q', 'Alice', 'Crippa');
+
+-- MEDICI --
+INSERT INTO Personale VALUES ('FRRLRZ67H12F704C', 'Lucrezia', 'Ferrari');
+INSERT INTO Personale VALUES ('LMBGCM66S03E617M', 'Giacomo', 'Lombardo');
+INSERT INTO Personale VALUES ('PZZFNC68C01H703H', 'Francesco', 'Pozzi');
+INSERT INTO Personale VALUES ('MRURCC70P20B354Q', 'Rebecca', 'Mura');
+INSERT INTO Personale VALUES ('BRTMTN92E24G273T', 'Martin', 'Beretta');
+INSERT INTO Personale VALUES ('GNTVSC87M12G273E', 'Vasco', 'Gentili');
+INSERT INTO Personale VALUES ('TDSFNC67T14D969K', 'Franco', 'Tedeschi');
+INSERT INTO Personale VALUES ('GGIRND68L29L736F', 'Orlando', 'Gigi');
+INSERT INTO Personale VALUES ('MRRNNZ70D04L736K', 'Nunzio', 'Marrone');
+INSERT INTO Personale VALUES ('GRSGDE79H18A944J', 'Egidio', 'Grossi');
+
+-- RESPONSABILI --
+INSERT INTO Personale VALUES ('CVLVNT80L31H501G', 'Valentina', 'Cavallaro');
+INSERT INTO Personale VALUES ('TTRGDI75A17H703E', 'Giada', 'Totaro');
+INSERT INTO Personale VALUES ('PRCCML70S54F133A', 'Camilla', 'Petrucci');
+INSERT INTO Personale VALUES ('SLARMO67C08F133E', 'Romeo', 'Sala');
+INSERT INTO Personale VALUES ('CRRCSM78E06A662M', 'Cosimo', 'Cerri');
+INSERT INTO Personale VALUES ('SLVCST66T16A662A', 'Cristian', 'Salvi');
+INSERT INTO Personale VALUES ('TRZPLA93C52D969N', 'Paola', 'Terzi');
+INSERT INTO Personale VALUES ('LDODNT85A27A662J', 'Dante', 'Lodi');
+INSERT INTO Personale VALUES ('CSAGCR80C26D612E', 'Giancarlo', 'Casa');
+INSERT INTO Personale VALUES ('FRNRRT79L71D612J', 'Roberta', 'Fiorentino');
+
+
+
+------------------- TEL PERSONALE ----------------
+INSERT INTO tel_personale VALUES ('039457654', 'MRTSLA70T54E234I');
+INSERT INTO tel_personale VALUES ('039748374', 'MRCZLT65S34G234R');
+INSERT INTO tel_personale VALUES ('340645281', 'RSSGRG61H14F133M');
+INSERT INTO tel_personale VALUES ('348154850', 'MSSMRA58R18E507V');
+INSERT INTO tel_personale VALUES ('338164859', 'LCNLSN80HO3C351G');
+INSERT INTO tel_personale VALUES ('320163840', 'MZZMLN72A70G273C');
+INSERT INTO tel_personale VALUES ('039653147', 'BVLCST78L20D612P');
+INSERT INTO tel_personale VALUES ('380915859', 'BNDNRS79T60G273L');
+INSERT INTO tel_personale VALUES ('039579405', 'GIOCDD78E03A662R');
+INSERT INTO tel_personale VALUES ('340175960', 'CRPLCA90M42L736Q');
+
+
+INSERT INTO tel_personale VALUES ('039961437', 'FRRLRZ67H12F704C');
+INSERT INTO tel_personale VALUES ('039017357', 'LMBGCM66S03E617M');
+INSERT INTO tel_personale VALUES ('380143759', 'PZZFNC68C01H703H');
+INSERT INTO tel_personale VALUES ('339164850', 'MRURCC70P20B354Q');
+INSERT INTO tel_personale VALUES ('380175960', 'BRTMTN92E24G273T');
+INSERT INTO tel_personale VALUES ('338175902', 'GNTVSC87M12G273E');
+INSERT INTO tel_personale VALUES ('333571950', 'TDSFNC67T14D969K');
+INSERT INTO tel_personale VALUES ('334692759', 'GGIRND68L29L736F');
+INSERT INTO tel_personale VALUES ('366145787', 'MRRNNZ70D04L736K');
+INSERT INTO tel_personale VALUES ('347146380', 'GRSGDE79H18A944J');
+
+INSERT INTO tel_personale VALUES ('346658265', 'CVLVNT80L31H501G');
+INSERT INTO tel_personale VALUES ('334768273', 'TTRGDI75A17H703E');
+INSERT INTO tel_personale VALUES ('348155859', 'PRCCML70S54F133A');
+INSERT INTO tel_personale VALUES ('333028562', 'SLARMO67C08F133E');
+INSERT INTO tel_personale VALUES ('371753179', 'CRRCSM78E06A662M');
+INSERT INTO tel_personale VALUES ('389125627', 'SLVCST66T16A662A');
+INSERT INTO tel_personale VALUES ('329750758', 'TRZPLA93C52D969N');
+INSERT INTO tel_personale VALUES ('377146746', 'LDODNT85A27A662J');
+INSERT INTO tel_personale VALUES ('329086218', 'CSAGCR80C26D612E');
+INSERT INTO tel_personale VALUES ('392147319', 'FRNRRT79L71D612J');
+
+
+
+------------------- TEL PISCINA ----------------
+INSERT INTO tel_piscina VALUES ('039926584', 'acquaSplash');
+INSERT INTO tel_piscina VALUES ('039134832', 'SiloamClub');
+INSERT INTO tel_piscina VALUES ('039424759', 'Tuffo Splash');
+INSERT INTO tel_piscina VALUES ('039035614', 'Pace e mare');
+INSERT INTO tel_piscina VALUES ('039163859', 'Sporting Club Desio');
+INSERT INTO tel_piscina VALUES ('039195761', 'Leone X');
+INSERT INTO tel_piscina VALUES ('039018465', 'Fun splash');
+INSERT INTO tel_piscina VALUES ('039265860', 'Pratogrande');
+INSERT INTO tel_piscina VALUES ('039340647', 'Wet Life');
+INSERT INTO tel_piscina VALUES ('039865826', 'Cielo Blu');
+
+------------------- RESPONSABILE ----------------
+INSERT INTO Responsabile VALUES ('CVLVNT80L31H501G');
+INSERT INTO Responsabile VALUES ('TTRGDI75A17H703E');
+INSERT INTO Responsabile VALUES ('PRCCML70S54F133A');
+INSERT INTO Responsabile VALUES ('SLARMO67C08F133E');
+INSERT INTO Responsabile VALUES ('CRRCSM78E06A662M');
+INSERT INTO Responsabile VALUES ('SLVCST66T16A662A');
+INSERT INTO Responsabile VALUES ('TRZPLA93C52D969N');
+INSERT INTO Responsabile VALUES ('LDODNT85A27A662J');
+INSERT INTO Responsabile VALUES ('CSAGCR80C26D612E');
+INSERT INTO Responsabile VALUES ('FRNRRT79L71D612J');
+
+
+
+------------------- MEDICO ----------------
+INSERT INTO Medico VALUES ('FRRLRZ67H12F704C');
+INSERT INTO Medico VALUES ('LMBGCM66S03E617M');
+INSERT INTO Medico VALUES ('PZZFNC68C01H703H');
+INSERT INTO Medico VALUES ('MRURCC70P20B354Q');
+INSERT INTO Medico VALUES ('BRTMTN92E24G273T');
+INSERT INTO Medico VALUES ('GNTVSC87M12G273E');
+INSERT INTO Medico VALUES ('TDSFNC67T14D969K');
+INSERT INTO Medico VALUES ('GGIRND68L29L736F');
+INSERT INTO Medico VALUES ('MRRNNZ70D04L736K');
+INSERT INTO Medico VALUES ('GRSGDE79H18A944J');
+
+
+
+------------------- ISTRUTTORE ----------------
+INSERT INTO Istruttore VALUES ('MRTSLA70T54E234I', '13', NULL);
+INSERT INTO Istruttore VALUES ('MRCZLT65S34G234R', NULL , '6 mesi');
+INSERT INTO Istruttore VALUES ('RSSGRG61H14F133M', '10', '3 anni');
+INSERT INTO Istruttore VALUES ('MSSMRA58R18E507V', '6', 'indeterminato');
+INSERT INTO Istruttore VALUES ('LCNLSN80HO3C351G', '8', '9 mesi');
+INSERT INTO Istruttore VALUES ('MZZMLN72A70G273C', '10',  '1 anno');
+INSERT INTO Istruttore VALUES ('BVLCST78L20D612P', NULL, '6 mesi');
+INSERT INTO Istruttore VALUES ('BNDNRS79T60G273L', '12', '3 mesi');
+INSERT INTO Istruttore VALUES ('GIOCDD78E03A662R', '7', 'indeterminato');
+INSERT INTO Istruttore VALUES ('CRPLCA90M42L736Q', '5', '3 anni');
+
+
+------------------- DIRIGE ----------------
+INSERT INTO Dirige VALUES ('CVLVNT80L31H501G', 'acquaSplash', '2018', 'Martedi', '09:00:00');
+INSERT INTO Dirige VALUES ('CVLVNT80L31H501G', 'acquaSplash', '2019','Giovedi', '09:00:00');
+
+
+INSERT INTO Dirige VALUES ('TTRGDI75A17H703E', 'SiloamClub', '2021', 'Lunedi', '10:00:00');
+INSERT INTO Dirige VALUES ('TTRGDI75A17H703E', 'SiloamClub', '2020', 'Mercoledi', '09:00:00');
+INSERT INTO Dirige VALUES ('TTRGDI75A17H703E', 'SiloamClub', '2018', 'Venerdi', '15:00:00');
+
+INSERT INTO Dirige VALUES ('PRCCML70S54F133A', 'Tuffo Splash', '2017', 'Lunedi', '15:00:00');
+INSERT INTO Dirige VALUES ('PRCCML70S54F133A', 'Tuffo Splash', '2018', 'Martedi', '09:00:00');
+INSERT INTO Dirige VALUES ('PRCCML70S54F133A', 'Tuffo Splash', '2015', 'Giovedi', '09:00:00');
+
+INSERT INTO Dirige VALUES ('SLARMO67C08F133E', 'Pace e mare', '2015', 'Mercoledi', '10:00:00');
+INSERT INTO Dirige VALUES ('SLARMO67C08F133E', 'Pace e mare', '2018', 'Venerdi', '15:00:00');
+
+INSERT INTO Dirige VALUES ('SLVCST66T16A662A', 'Leone X', '2018', 'Mercoledi', '10:00:00');
+INSERT INTO Dirige VALUES ('SLVCST66T16A662A', 'Leone X', '2019', 'Venerdi', '10:00:00');
+
+INSERT INTO Dirige VALUES ('TRZPLA93C52D969N', 'Fun splash', '2021', 'Martedi', '09:00:00');
+INSERT INTO Dirige VALUES ('TRZPLA93C52D969N', 'Fun splash', '2020', 'Giovedi', '09:00:00');
+INSERT INTO Dirige VALUES ('TRZPLA93C52D969N', 'Fun splash', '2014', 'Sabato', '15:00:00');
+
+INSERT INTO Dirige VALUES ('LDODNT85A27A662J', 'Pratogrande', '2019', 'Mercoledi', '08:30:00');
+INSERT INTO Dirige VALUES ('LDODNT85A27A662J', 'Pratogrande', '2018', 'Venerdi', '08:30:00');
+
+INSERT INTO Dirige VALUES ('CSAGCR80C26D612E', 'Wet Life', '2016', 'Lunedi', '15:00:00');
+INSERT INTO Dirige VALUES ('CSAGCR80C26D612E', 'Wet Life', '2020', 'Mercoledi', '10:00:00');
+
+INSERT INTO Dirige VALUES ('FRNRRT79L71D612J', 'Cielo Blu', '2018', 'Lunedi', '09:00:00');
+INSERT INTO Dirige VALUES ('FRNRRT79L71D612J', 'Cielo Blu', '2017', 'Martedi', '15:30:00');
+INSERT INTO Dirige VALUES ('FRNRRT79L71D612J', 'Cielo Blu', '2016', 'Mercoledi', '15:30:00');
+INSERT INTO Dirige VALUES ('FRNRRT79L71D612J', 'Cielo Blu', '2021', 'Giovedi', '09:00:00');
+
+
+------------------- QUALIFICA ----------------
+INSERT INTO Qualifica VALUES ('Pallanuoto', 'MRTSLA70T54E234I');
+INSERT INTO Qualifica VALUES ('Fitness', 'MRCZLT65S34G234R');
+INSERT INTO Qualifica VALUES ('Nuoto', 'RSSGRG61H14F133M');
+INSERT INTO Qualifica VALUES ('Tuffi', 'MSSMRA58R18E507V');
+INSERT INTO Qualifica VALUES ('Fitness', 'MSSMRA58R18E507V');
+INSERT INTO Qualifica VALUES ('Acquagym', 'LCNLSN80HO3C351G');
+INSERT INTO Qualifica VALUES ('Nuoto', 'MZZMLN72A70G273C');
+INSERT INTO Qualifica VALUES ('Pallanuoto', 'BVLCST78L20D612P');
+INSERT INTO Qualifica VALUES ('Tuffi', 'BNDNRS79T60G273L');
+INSERT INTO Qualifica VALUES ('Nuoto', 'BNDNRS79T60G273L');
+INSERT INTO Qualifica VALUES ('Acquagym', 'GIOCDD78E03A662R');
+INSERT INTO Qualifica VALUES ('Nuoto', 'CRPLCA90M42L736Q');
+
+------------------- IMPIEGO ----------------
+INSERT INTO Impiego VALUES ('MRTSLA70T54E234I', '2021-03-12', NULL, 'acquaSplash');
+INSERT INTO Impiego VALUES ('MRCZLT65S34G234R', '2021-05-07', '2021-09-12', 'SiloamClub');
+INSERT INTO Impiego VALUES ('RSSGRG61H14F133M', '2021-03-02', NULL, 'Tuffo Splash');
+INSERT INTO Impiego VALUES ('MSSMRA58R18E507V', '2021-03-12', '2021-12-01', 'Pace e mare');
+INSERT INTO Impiego VALUES ('LCNLSN80HO3C351G', '2021-01-25', '2021-07-12', 'Sporting Club Desio');
+INSERT INTO Impiego VALUES ('MZZMLN72A70G273C', '2021-02-22', '2021-06-12', 'Leone X');
+INSERT INTO Impiego VALUES ('BVLCST78L20D612P', '2021-03-21', NULL, 'Fun splash');
+INSERT INTO Impiego VALUES ('BNDNRS79T60G273L', '2021-07-12', '2021-09-12', 'Pratogrande');
+INSERT INTO Impiego VALUES ('GIOCDD78E03A662R', '2021-09-18', '2021-12-01', 'Wet Life');
+INSERT INTO Impiego VALUES ('CRPLCA90M42L736Q', '2021-05-17', NULL, 'Cielo Blu');
+
+------------------- SOSTITUZIONE ----------------
+INSERT INTO Sostituzione VALUES ('MRTSLA70T54E234I', 'CRPLCA90M42L736Q', '2021-03-11', '2021-05-11');
+INSERT INTO Sostituzione VALUES ('MRCZLT65S34G234R', 'GIOCDD78E03A662R', '2021-01-12', '2021-04-07');
+INSERT INTO Sostituzione VALUES ('RSSGRG61H14F133M', 'BNDNRS79T60G273L', '2021-02-07', '2021-06-09');
+INSERT INTO Sostituzione VALUES ('MSSMRA58R18E507V', 'BVLCST78L20D612P', '2021-04-03', '2021-06-11');
+INSERT INTO Sostituzione VALUES ('LCNLSN80HO3C351G', 'MZZMLN72A70G273C', '2021-07-09', '2021-12-12');
+INSERT INTO Sostituzione VALUES ('MZZMLN72A70G273C', 'LCNLSN80HO3C351G', '2021-02-28', '2021-03-11');
+INSERT INTO Sostituzione VALUES ('BVLCST78L20D612P', 'MSSMRA58R18E507V', '2021-05-25', '2021-07-20');
+INSERT INTO Sostituzione VALUES ('BNDNRS79T60G273L', 'RSSGRG61H14F133M', '2021-03-12','2021-04-12');
+INSERT INTO Sostituzione VALUES ('GIOCDD78E03A662R', 'MRCZLT65S34G234R', '2021-02-07', '2021-03-11');
+INSERT INTO Sostituzione VALUES ('CRPLCA90M42L736Q', 'MRTSLA70T54E234I', '2021-01-22', '2021-05-05');
+
+
+------------------- ISCRITTO ----------------
+INSERT INTO Iscritto VALUES ('34675465', 'LCAVNC65T49D146L');
+INSERT INTO Iscritto VALUES ('54676574', 'null');
+INSERT INTO Iscritto VALUES ('67435789', 'MRMRB59B67D133P');
+INSERT INTO Iscritto VALUES ('23076876', 'LCBMTN67F53G120R');
+INSERT INTO Iscritto VALUES ('52836901', 'null');
+INSERT INTO Iscritto VALUES ('63890371', 'RGTACL68R58T167L');
+INSERT INTO Iscritto VALUES ('73467680', 'null');
+INSERT INTO Iscritto VALUES ('86424789', 'GDRMUR64G67V234B');
+INSERT INTO Iscritto VALUES ('24785325', 'null');
+INSERT INTO Iscritto VALUES ('57524674', 'LRTFRC60G40R156W');
+
+
+------------------- ISCRIZIONE ----------------
+INSERT INTO Iscrizione VALUES ('284a5', '34675465', '2021-01-14');
+INSERT INTO Iscrizione VALUES ('254a3', '54676574', '2021-01-01');
+INSERT INTO Iscrizione VALUES ( '12bc5', '67435789', '2021-01-14');
+INSERT INTO Iscrizione VALUES ('22d67', '23076876', '2021-01-03');
+INSERT INTO Iscrizione VALUES ('7b3a2', '52836901', '2021-02-22');
+INSERT INTO Iscrizione VALUES ('234a5', '63890371', '2021-01-14');
+INSERT INTO Iscrizione VALUES ('aer11', '73467680', '2021-04-18');
+INSERT INTO Iscrizione VALUES ('196e8', '86424789', '2021-01-14');
+INSERT INTO Iscrizione VALUES ('2a5e3', '24785325', '2021-07-21');
+INSERT INTO Iscrizione VALUES ('69ae5', '57524674', '2021-01-12');
+
+
+------------------- SELEZIONE ----------------
+INSERT INTO Selezione VALUES ('34675465', '284a5');
+INSERT INTO Selezione VALUES ('54676574', '254a3');
+INSERT INTO Selezione VALUES ('67435789', '12bc5');
+INSERT INTO Selezione VALUES ('23076876', '22d67');
+INSERT INTO Selezione VALUES ('52836901', '7b3a2');
+INSERT INTO Selezione VALUES ('63890371', '234a5');
+INSERT INTO Selezione VALUES ('73467680', 'aer11');
+INSERT INTO Selezione VALUES ('86424789', '196e8');
+INSERT INTO Selezione VALUES ('24785325', '2a5e3');
+INSERT INTO Selezione VALUES ('57524674', '69ae5');
+
+
+------------------- EDIZIONE ----------------
+INSERT INTO Edizione VALUES ('284a5', 1, '2020-09-01', '2021-09-01', '14:30:00', 'martedì', 'MRTSLA70T54E234I');
+INSERT INTO Edizione VALUES ('254a3', 2, '2020-03-10', '2021-09-01', '10:45:00', 'venerdì', 'MRCZLT65S34G234R');
+INSERT INTO Edizione VALUES ('12bc5', 3, '2020-09-01', '2021-7-01', '01:40:00', 'martedì', 'RSSGRG61H14F133M');
+INSERT INTO Edizione VALUES ('22d67', 1, '2020-03-09', '2021-09-01', '11:00:00', 'lunedì', 'MSSMRA58R18E507V');
+INSERT INTO Edizione VALUES ('7b3a2', 4, '2020-09-01', '2021-12-01', '17:15:00', 'giovedì', 'LCNLSN80HO3C351G');
+INSERT INTO Edizione VALUES ('234a5', 3, '2020-02-15', '2021-09-01', '10:30:00', 'martedì', 'MZZMLN72A70G273C');
+INSERT INTO Edizione VALUES ('aer11', 4, '2020-04-03', '2021-12-01', '10:00:00', 'martedì', 'BVLCST78L20D612P');
+INSERT INTO Edizione VALUES ('196e8', 2, '2020-09-01', '2021-09-01', '10:00:00', 'sabato', 'BNDNRS79T60G273L');
+INSERT INTO Edizione VALUES ('2a5e3', 1, '2020-01-15', '2021-09-01', '16:45:00', 'martedì', 'GIOCDD78E03A662R');
+INSERT INTO Edizione VALUES ('69ae5', 2, '2020-01-12', '2021-07-01', '10:30:00', 'mercoledì', 'CRPLCA90M42L736Q');
+
+
+------------------- CERTIFICATO ----------------
+INSERT INTO Certificato VALUES ('FRRLRZ67H12F704C', '34675465', '2021-01-30');
+INSERT INTO Certificato VALUES ('LMBGCM66S03E617M', '54676574', '2021-06-17');
+INSERT INTO Certificato VALUES ('PZZFNC68C01H703H', '67435789', '2021-02-10');
+INSERT INTO Certificato VALUES ('MRURCC70P20B354Q', '23076876', '2021-03-17');
+INSERT INTO Certificato VALUES ('BRTMTN92E24G273T', '52836901', '2021-10-17');
+INSERT INTO Certificato VALUES ('GNTVSC87M12G273E', '63890371', '2021-06-20');
+INSERT INTO Certificato VALUES ('TDSFNC67T14D969K', '73467680', '2021-09-18');
+INSERT INTO Certificato VALUES ('GGIRND68L29L736F', '86424789', '2021-07-10');
+INSERT INTO Certificato VALUES ('MRRNNZ70D04L736K', '24785325', '2021-02-22');
+INSERT INTO Certificato VALUES ('GRSGDE79H18A944J', '57524674', '2021-06-27');
+
+
+------------------- GARA ----------------
+INSERT INTO Gara VALUES ('284a5', 'dorso', '2021'); 
+INSERT INTO Gara VALUES ('254a3', 'rana', '2021');
+INSERT INTO Gara VALUES ('12bc5', 'dorso', '2020'); 
+INSERT INTO Gara VALUES ('22d67',  'rana', '2019');
+INSERT INTO Gara VALUES ('7b3a2', 'dorso', '2021'); 
+INSERT INTO Gara VALUES ('234a5', 'rana', '2013');
+INSERT INTO Gara VALUES ('aer11', 'dorso', '2021'); 
+INSERT INTO Gara VALUES ('196e8', 'libero', '2020');
+INSERT INTO Gara VALUES ('2a5e3', 'libero', '2021'); 
+INSERT INTO Gara VALUES ('69ae5', 'libero', '2019');
+
+
+------------------- PARTECIPA ----------------
+INSERT INTO Partecipa VALUES ('34675465', 'dorso', '2021', '284a5', 4, '16:25:00'); 
+INSERT INTO Partecipa VALUES ('54676574', 'libero', '2021', '254a3', 1, '12:00:00');
+insert into Partecipa values ('54676574', 'rana', '2021', '254a3', 2,  '15:20:00'); 
+INSERT INTO Partecipa VALUES ('67435789', 'libero', '2021', '12bc5', 1, '10:00:00'); 
+INSERT INTO Partecipa VALUES ('52836901', 'rana', '2021', '7b3a2', 2, '15:30:00'); 
+INSERT INTO Partecipa VALUES ('63890371', 'dorso', '2021', '234a5', 3, '15:00:00'); 
+INSERT INTO Partecipa VALUES ('73467680', 'libero', '2021', 'aer11', 4, '15:00:00'); 
+INSERT INTO Partecipa VALUES ('86424789', 'dorso', '2021', '196e8', 3, '12:15:00'); 
+INSERT INTO Partecipa VALUES ('24785325', 'dorso', '2021', '2a5e3', 1, '11:45:00'); 
+INSERT INTO Partecipa VALUES ('57524674', 'rana', '2021', '69ae5', 3, '18:30:00'); 
+
+
+

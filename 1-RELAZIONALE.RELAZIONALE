@@ -1,0 +1,44 @@
+
+-------------------------MODELLO RELAZIONALE-----------------------------
+
+PISCINA (nomeP, città, via, CAP, apertura, chiusura)
+
+CORSONUOTO (ID, tipologia, costo, minP, maxP, livello, corsia, nomeP)
+
+VASCA (tipologia, nomeP,numeroCorsie,fruizioneDa,fruizioneA)  
+
+PERSONALE(CF,nome,cognome)
+
+TEL_PERSONALE(numero,CF) 
+
+TEL_PISCINA (numeroPiscina, nomeP)
+
+RESPONSABILE (CF)    
+
+DIRIGE (CFresponsabile, nomeP, anno, giornoReperibile, oraReperibile)
+
+MEDICO(CF)
+
+ISTRUTTORE(CF,ferie,durata_contratto)
+
+QUALIFICA(tipologia, CFIstruttore)
+
+SOSTITUZIONE(CFtitolare,CFsupplente,inizio,fine)  
+
+IMPIEGO(CFIstruttore, inizio,fine, nomeP)           
+
+ISCRITTO (numTessera, CFGenitore)
+
+ISCRIZIONE(IDcorso , numTessera, dataIscrizione)      
+
+SELEZIONE(IDcorso,numTesseraIscritto)        
+
+EDIZIONE (IDCorso, numEdizione, dataInizio, ora, giorno, CFistruttore)
+
+CERTIFICATO(CFMedico,numTessera,dataVisita)
+
+PARTECIPA(numTesseraIscritto, stile, anno, IDcorso, piazzamento, tempo)
+
+GARA(IDcorso, stile, anno)
+
+

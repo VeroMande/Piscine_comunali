@@ -1,0 +1,58 @@
+
+-------------------------------INTERROGAZIONI-------------------------------------------
+
+
+1. Trovare tutti gli istruttori qualificati nella tipologia “pallanuoto”
+SELECT CFistruttore
+FROM qualifica
+WHERE tipologia=’pallanuoto’
+
+2. trovare il periodo di apertura della piscina di Milano
+SELECT apertoDa, finoA
+FROM Piscina
+WHERE città = ‘Milano’
+
+3. trovare l’ID dei corsi di nuoto che si svolgono nella 2° corsia
+SELECT ID
+FROM CorsoDiNuoto
+WHERE corsia = ‘2’
+
+4. trovare il numero di tessera di tutti gli iscritti maggiorenni
+SELECT numTessera
+FROM Iscritto
+WHERE CFGenitore = ‘null’
+
+5.  Determinare gli istruttori supplenti che hanno esattamente una supplenza nella stagione corrente
+SELECT CFsupplente
+FROM sostituzione 
+WHERE inizio >= ‘2021-01-01’
+GROUP BY CFsupplente
+HAVING COUNT(inizio) = 1
+
+6.  Determinare gli istruttori supplenti che hanno almeno due supplenze nella stagione corrente
+SELECT CFsupplente
+FROM sostituzione 
+WHERE inizio>= ‘2021-01-01’
+GROUP BY CFsupplente
+HAVING COUNT(inizio) >=2
+
+7.  Determinare gli istruttori supplenti che hanno non più di due supplenze nella stagione corrente
+SELECT CFsupplente
+FROM sostituzione
+WHERE inizio>= ‘2021-01-01’
+GROUP BY CFsupplente
+HAVING COUNT(inizio) <=2
+
+8.restituire per ogni corso il numero di partecipanti alle gare di fine corso per l’anno corrente
+SELECT DISTINCT idcorso, COUNT (numTesseraIscritto)
+FROM partecipa
+WHERE anno='2021'
+GROUP BY idcorso
+
+9.Restituire le informazioni del podio di gare relative allo stile rana per l’anno corrente.
+SELECT IDcorso, numTesseraIscritto, piazzamento, tempo
+FROM partecipa
+WHERE stile='rana' AND anno='2021' AND piazzamento BETWEEN 1 AND 3
+ORDER BY IDcorso, piazzamento
+
+

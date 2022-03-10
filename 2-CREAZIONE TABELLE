@@ -1,0 +1,168 @@
+
+-------------------CREAZIONE TABELLE---------------
+
+
+CREATE TABLE Piscina (
+     nomeP varchar(20) PRIMARY KEY,
+     citta varchar(20) NOT NULL,
+     via varchar(20) NOT NULL,
+     CAP integer NOT NULL,
+     apertura date NOT NULL,
+     chiusura date NOT NULL 
+);
+
+CREATE TABLE CorsoDiNuoto (
+     ID varchar(20) PRIMARY KEY,
+     tipologia varchar(20) NOT NULL,
+     costo decimal(8,2) NOT NULL DEFAULT 0 CHECK(costo>=0),
+     minP integer NOT NULL,
+     maxP integer NOT NULL CHECK(maxP<=20),
+     livello integer NOT NULL CHECK(livello>=1 AND livello<=3),
+     corsia integer NOT NULL,
+     nomeP varchar(20) NOT NULL REFERENCES Piscina(nomeP) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Vasca (
+     tipologia varchar(30),
+     nomeP varchar(20) REFERENCES Piscina(nomeP) ON UPDATE CASCADE ON DELETE CASCADE,
+     corsia integer NULL,
+     FruizioneDA date NOT NULL,
+     FruizioneA date NOT NULL,
+     PRIMARY KEY(tipologia, nomeP)
+);
+
+CREATE TABLE Personale (
+     CF varchar(20) PRIMARY KEY,
+     nome varchar(20) NOT NULL,
+     cognome varchar(20) NOT NULL
+);
+
+CREATE TABLE Tel_Personale (
+     numero integer PRIMARY KEY,
+     CF varchar(20) REFERENCES Personale(CF) ON UPDATE CASCADE ON DELETE
+    CASCADE
+);
+
+
+CREATE TABLE Tel_piscina (
+     numero integer PRIMARY KEY,
+     nomeP varchar(20) REFERENCES Piscina(NomeP) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Responsabile (
+     CF varchar(20) PRIMARY KEY,
+     FOREIGN KEY(CF) REFERENCES Personale(CF) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Dirige (
+     CFResponsabile varchar(20) REFERENCES Responsabile(CF) ON UPDATE CASCADE ON
+     DELETE CASCADE,
+     nomeP varchar(20) NOT NULL,
+     anno integer NOT NULL,
+     giornoReperibile varchar(20) NULL, 
+     oraReperibile time NULL, 
+     PRIMARY KEY(CFResponsabile, nomeP, anno),
+     FOREIGN KEY(nomeP) REFERENCES Piscina(nomeP) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Medico (
+     CF varchar(20) PRIMARY KEY,
+     FOREIGN KEY(CF) REFERENCES Personale(CF) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Istruttore(
+     CF varchar(20) PRIMARY KEY references Personale(CF) ON UPDATE CASCADE ON
+     DELETE CASCADE,
+     ferie numeric NULL CHECK(ferie>=0),
+     durataContratto varchar(20) NULL
+);
+
+CREATE TABLE Qualifica(
+     tipologia varchar(20),
+     CFIstruttore varchar(20) REFERENCES Personale(CF) ON UPDATE CASCADE ON DELETE CASCADE,
+     PRIMARY KEY(tipologia, CFIstruttore)
+);
+
+CREATE TABLE Sostituzione(
+     CFTitolare varchar(20) REFERENCES Personale(CF) ON UPDATE CASCADE ON DELETE CASCADE,
+     CFsupplente varchar(20) REFERENCES Personale(CF) ON UPDATE CASCADE ON DELETE CASCADE,
+     inizio date NOT NULL,
+     fine date NOT NULL,
+     PRIMARY KEY(CFtitolare, CFsupplente, inizio),
+     CHECK(inizio<=fine)
+);
+
+CREATE TABLE Impiego(
+       CFIstruttore char(20) REFERENCES Personale(CF) ON UPDATE CASCADE ON DELETE
+       CASCADE,
+       inizio date NOT NULL CHECK(inizio<fine),
+       fine date NULL CHECK(fine>inizio),
+       nomeP varchar(20) NOT NULL,
+       PRIMARY KEY (CFIstruttore, inizio),
+       FOREIGN KEY(nomeP) REFERENCES Piscina(nomeP) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Iscritto (
+     numTessera varchar(20) PRIMARY KEY,
+     CFGenitore varchar(20) NULL
+);
+
+CREATE TABLE Edizione (
+     IDCorso varchar(20) REFERENCES CorsoDiNuoto(ID) ON UPDATE CASCADE ON DELETE CASCADE,
+     numEdizione numeric NOT NULL,
+     dataInizio date NOT NULL,
+     dataFine date NOT NULL, 
+     ora time NOT NULL,
+     giorno varchar(20) NOT NULL,
+     CFistruttore varchar(20),
+     PRIMARY KEY(IDCorso, numEdizione, dataInizio),
+     FOREIGN KEY(CFistruttore) references Istruttore(CF) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+ 
+CREATE TABLE Iscrizione (
+     IDCorso varchar(20) REFERENCES CorsoDiNuoto(ID) ON UPDATE CASCADE ON DELETE CASCADE,
+     numTessera varchar(20),
+     dataIscrizione date,
+     PRIMARY KEY(IDCorso, numTessera, dataIscrizione),
+     FOREIGN KEY(numTessera) references Iscritto(numTessera) ON UPDATE CASCADE ON
+     DELETE CASCADE
+);
+
+   
+CREATE TABLE Selezione (
+    numTesseraIscritto  varchar(20) REFERENCES Iscritto(numTessera) ON UPDATE CASCADE
+    ON DELETE CASCADE,
+    IDcorso varchar(20),
+    PRIMARY KEY(numTesseraIscritto, IDcorso),
+    FOREIGN KEY(IDcorso) references CorsodiNuoto(ID) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+
+CREATE TABLE Certificato (
+     CFMedico varchar(20) NOT NULL REFERENCES Medico(CF) ON UPDATE CASCADE ON DELETE CASCADE,
+     numTessera varchar(20) NOT NULL,
+     dataVisita date NOT NULL,
+     PRIMARY KEY(CFMedico, numTessera, dataVisita),
+     FOREIGN KEY(numTessera) REFERENCES Iscritto(numTessera) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Partecipa (
+    numTesseraIscritto varchar(20) REFERENCES Iscritto(numTessera) ON UPDATE CASCADE ON DELETE CASCADE,
+    stile varchar(20) NOT NULL,
+    anno varchar(20) NOT NULL,
+    IDcorso varchar(20) NOT NULL,
+    piazzamento numeric NOT NULL,
+    tempo time NOT NULL,
+    PRIMARY KEY(numTesseraIscritto, stile, anno, IDcorso),
+    FOREIGN KEY(IDcorso) REFERENCES CorsodiNuoto(ID) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE Gara (
+    IDcorso varchar(20) NOT NULL REFERENCES CorsodiNuoto(ID) ON UPDATE CASCADE ON DELETE CASCADE, 
+    stile varchar(20) NOT NULL,
+    anno varchar(20) NOT NULL,
+    PRIMARY KEY(IDcorso, stile, anno)
+);
+
+
